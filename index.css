@@ -86,6 +86,10 @@ body {
     box-shadow: 0px 1px 50px red;
 }
 
+#rotateTitle {
+    /* padding: 0 0 0 5px; */
+}
+
 .title #btn {
     position: relative;
     top: 35%;
@@ -98,6 +102,27 @@ body {
     font-size: 1.5rem;
 }
 
+.anim {
+    animation: explosion 1s forwards;
+
+}
+
+
+/* .anim::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    width: 0%;
+    height: 2px;
+    background: red;
+} */
+
+/* .title #btn:hover::before {
+    width: 50%;
+} */
+
 .rotate {
     display: inline-block;
     rotate: -30deg;
@@ -109,3 +134,26 @@ body {
 
 
 
+/* Animation d'explosion */
+@keyframes explosion {
+    0% {
+        transform: scale();
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(15);
+        opacity: 0.5;
+    }
+}
+
+/* Styles du bouton */
+.explosion-btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
